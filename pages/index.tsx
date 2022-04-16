@@ -1,29 +1,101 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import tw from "twin.macro";
+import Container from '../components/Container';
+import ProjectCard from './../components/ProjectCard';
 
-import styled from 'styled-components'
+const projects = [
+  {
+    key: 'project.slug',
+    title: 'project1  (production application)',
+    slug: 'project.slug',
+    logo: 'project.logo',
+    description: 'project1 description',
+  },
+  {
+    key: 'project.slug',
+    title: 'project1',
+    slug: 'project.slug',
+    logo: 'project.logo',
+    description: 'project1 description',
+  },
+  {
+    key: 'project.slug',
+    title: 'project1  (production application)',
+    slug: 'project.slug',
+    logo: 'project.logo',
+    description: 'project1 description',
+  },
+  {
+    key: 'project.slug',
+    title: 'project1',
+    slug: 'project.slug',
+    logo: 'project.logo',
+    description: 'project1 description',
+  },
+];
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Lanwrence's new portfolio site, Lawmax  👋</h1>
-    <p>
-      <Link href="/about">
-        <PrimaryButton>
-        <a>About</a>
-        </PrimaryButton>
-      </Link>
-    </p>
-  </Layout>
-)
+export default function Home({ videos }) {
+  return (
+    <Container>
+      <div className="flex flex-col justify-center items-start max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col-reverse sm:flex-row items-start">
+          <div className="flex flex-col pr-8">
+            <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
+              Lawrence Dass
+            </h1>
+            <h2 className="text-gray-700 dark:text-gray-200 mb-4">
+              Senior Associate - ReactJS at{' '}
+              <span className="font-semibold">Publicis Sapient </span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <section className="w-full  max-w-6xl mx-auto">
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+            Projects
+          </h3>
 
+          <div className="grid w-full grid-cols-1 gap-4 my-2 mt-4">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                title={project.title}
+                slug={project.slug}
+                logo={project.logo}
+                description={project.description}
+              />
+            ))}
+          </div>
 
-const PrimaryButton = tw.button`bg-blue-800 text-white px-6 py-2 m-6 rounded-md hover:bg-blue-600`; 
+          <Link href="/projects">
+            <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
+              View all projects
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 ml-1"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
+                />
+              </svg>
+            </a>
+          </Link>
 
-const StyledButton = styled.button`
-  background-color: red;
-  padding: 1rem;
-`;
-
-export default IndexPage
+          <span className="h-16" />
+        </section>
+      </div>
+    </Container>
+  );
+}
