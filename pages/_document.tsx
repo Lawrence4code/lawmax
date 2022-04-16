@@ -22,14 +22,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300;400&family=Josefin+Sans:wght@300;400&family=Jost:wght@300;400&family=Nunito+Sans:wght@300;400&family=Nunito:wght@300;400&family=Open+Sans:ital,wght@0,400;1,300&family=Oswald:wght@300;400&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

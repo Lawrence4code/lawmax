@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Proxima Nova', ...fontFamily.sans],
+        sans: ['Josefin Sans', ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
