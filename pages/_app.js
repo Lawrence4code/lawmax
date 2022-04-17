@@ -2,6 +2,8 @@ import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 import { ThemeProvider } from 'next-themes';
 
+import Container from 'components/Container';
+
 import './../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
@@ -12,7 +14,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Enter description here." />
       </Head>
       <ThemeProvider attribute="class">
-        <Component {...pageProps} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </ThemeProvider>
     </>
   );
