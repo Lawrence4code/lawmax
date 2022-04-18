@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-import ProjectCard from './../components/ProjectCard';
+import ProjectItem from '../components/ProjectItem';
 
 export default function Home({ projects }) {
   return (
@@ -29,16 +29,18 @@ export default function Home({ projects }) {
         </h3>
 
         <div className="grid w-full grid-cols-1 gap-4 my-2 mt-4">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              title={project.title}
-              slug={project.slug}
-              logo={project.logo}
-              description={project.description}
-              tags={project.tags}
-            />
-          ))}
+          {projects
+            .filter((project) => project.isFeatured)
+            .map((project) => (
+              <ProjectItem
+                key={project.slug}
+                title={project.title}
+                slug={project.slug}
+                logo={project.logo}
+                description={project.description}
+                tags={project.tags}
+              />
+            ))}
         </div>
 
         <Link href="/projects">
@@ -72,32 +74,6 @@ export async function getStaticProps() {
     uri: 'https://api-ap-south-1.graphcms.com/v2/cl21ya7e14cor01z40t7c2e91/master',
     cache: new InMemoryCache(),
   });
-
-  // const data = await client.query({
-  //   query: gql`
-  //     query Projects {
-  //       tags {
-  //         id
-  //         name
-  //         projects {
-  //           name
-  //         }
-  //       }
-  //       projects {
-  //         description
-  //         id
-  //         isFeatured
-  //         name
-  //         slug
-  //         tags {
-  //           id
-  //           image
-  //           name
-  //         }
-  //       }
-  //     }
-  //   `,
-  // });
 
   const data = await client.query({
     query: gql`
