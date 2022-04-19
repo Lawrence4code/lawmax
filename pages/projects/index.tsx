@@ -35,6 +35,7 @@ const Project = ({ projects }) => {
                 logo={project.logo}
                 description={project.description}
                 tags={project.tags}
+                isFeatured={project.isFeatured}
               />
             ))}
         </div>
@@ -63,6 +64,8 @@ export async function getStaticProps() {
           title
           slug
           image
+          link
+          githubLink
           tags {
             id
             image

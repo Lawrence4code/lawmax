@@ -22,7 +22,17 @@ function NavItem({ href, text }) {
           'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
         )}
       >
-        <span>{text}</span>
+        <span>
+          {text}
+          <span
+            className={cn(
+              isActive ? 'text-blue-600 text-2xl' : 'text-blue-100 text-xl'
+            )}
+          >
+            {' '}
+            .
+          </span>
+        </span>
       </a>
     </NextLink>
   );

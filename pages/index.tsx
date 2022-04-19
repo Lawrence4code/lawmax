@@ -39,6 +39,7 @@ export default function Home({ projects }) {
                 logo={project.logo}
                 description={project.description}
                 tags={project.tags}
+                isFeatured={project.isFeatured}
               />
             ))}
         </div>
