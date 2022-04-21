@@ -71,7 +71,7 @@ module.exports = {
             },
             ul: {
               li: {
-                '&:before': { backgroundColor: theme('colors.gray.500') },
+                '&:before': { backgroundColor: theme('colors.red.500') },
               },
             },
             strong: { color: theme('colors.gray.100') },

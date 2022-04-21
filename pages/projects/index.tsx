@@ -16,7 +16,7 @@ const Project = ({ projects }) => {
         {projects
           .filter((project) => project.isFeatured)
           .map((project) => {
-            return <ProductCard project={project} />;
+            return <ProductCard key={project.title} project={project} />;
           })}
       </div>
       <section className="w-full  max-w-6xl mx-auto">

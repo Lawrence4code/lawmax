@@ -47,9 +47,9 @@ export default function Container(props) {
   const { children } = props;
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 container-container">
+    <div className="bg-slate-50 dark:bg-gray-900 container-container">
       <div className="flex flex-col justify-center px-8 py-4">
-        <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-gray-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+        <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16  text-gray-900 bg-slate-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <Link href="/">
             <Image
               className="cursor-pointer"
@@ -103,7 +103,7 @@ export default function Container(props) {
       </div>
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        className="flex flex-col justify-center px-8 bg-slate-50 dark:bg-gray-900"
       >
         {children}
         <Footer />
