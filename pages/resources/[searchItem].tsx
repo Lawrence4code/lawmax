@@ -6,7 +6,7 @@ const ResourceListing = ({ tags = [] }) => {
   const {
     query: { searchItem },
   } = useRouter();
-  const categories = tags[0].tagItems || [];
+  const categories = tags[0]?.tagItems || [];
 
   return (
     <div className=" w-9/12 mx-auto mb-16">

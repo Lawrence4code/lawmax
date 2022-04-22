@@ -64,7 +64,7 @@ export default function Container(props: ContainerProps) {
           <div className="ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
-            {/* <NavItem href="/blog" text="Blog" /> */}
+            <NavItem href="/blog" text="Blog" />
             <NavItem href="/resources" text="Resources" />
           </div>
           <button
