@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         src={project.image.url}
         alt="Mountain"
       />
-      <div className="px-6 py-4">
+      <div className="px-2 sm:px-6  py-2 sm:py-4">
         <div className="text-lg font-bold text-left mt-2 text-gray-900 dark:text-gray-100">
           {project.title}
         </div>

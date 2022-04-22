@@ -1,6 +1,5 @@
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
 import Tag from 'components/Tag';
-import Link from 'next/link';
 
 import React from 'react';
 
@@ -10,10 +9,10 @@ const Resources = ({ categories }) => {
     .sort((a, b) => b.categoryItems.length - a.categoryItems.length);
 
   return (
-    <div className=" w-9/12 mx-auto mb-16">
+    <div className="w-full max-w-7xl  mx-auto mb-16">
       {filteredCategory.map((category) => {
         return (
-          <div key={category.name} className=" p-8">
+          <div key={category.name} className="sm:p-8 mb-4 sm:mb-0">
             <h1 className="w-fit font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white border-b-2 border-dashed border-blue-300 dark:border-blue-900">
               {category.name}
             </h1>
@@ -22,19 +21,16 @@ const Resources = ({ categories }) => {
                 <div key={categoryItem.title}>
                   <a className="w-full">
                     <div className="w-full">
-                      <div className="flex flex-row justify-between md:flex-row items-center">
+                      <div className="sm:flex flex-row justify-between md:flex-row items-center">
                         <h4 className="w-fit mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
                           {categoryItem.title}
                         </h4>
-                        <div className="px-2 pt-4 pb-2">
+                        <div className="sm:px-2 sm:pt-4 sm:pb-2">
                           {categoryItem.tags.map((tag) => {
                             return <Tag key={tag.name} tag={tag} />;
                           })}
                         </div>
                       </div>
-                      {/* <p className="text-gray-600 dark:text-gray-400">
-                        {categoryItem.description}
-                      </p> */}
                     </div>
                   </a>
                 </div>

@@ -15,7 +15,7 @@ export default function Blog({
 
   return (
     <div className="flex flex-col items-start justify-center max-w-7xl mx-auto mb-16">
-      <div className="relative w-2/5 ml-auto mb-4">
+      <div className="w-full relative sm:w-2/5 ml-auto mb-4">
         <input
           aria-label="Search articles"
           type="text"

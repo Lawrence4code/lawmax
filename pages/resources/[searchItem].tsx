@@ -9,7 +9,7 @@ const ResourceListing = ({ tags = [] }) => {
   const categories = tags[0]?.tagItems || [];
 
   return (
-    <div className=" w-9/12 mx-auto mb-16">
+    <div className="w-full max-w-7xl mx-auto mb-16">
       <h1 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
         Results for "{searchItem}"
       </h1>
@@ -27,7 +27,7 @@ const ResourceListing = ({ tags = [] }) => {
                 <p className="text-gray-600 dark:text-gray-400">
                   {categoryItem.description}
                 </p>
-                <div className="px-6 pt-4 pb-2">
+                <div className="sm:px-6 sm:pt-4 sm:pb-2">
                   {categoryItem?.tags?.map((tag) => {
                     return <Tag key={tag.name} tag={tag} />;
                   })}
