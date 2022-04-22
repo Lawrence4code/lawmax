@@ -72,10 +72,9 @@ export default function Home({ projects }) {
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: 'https://api-ap-south-1.graphcms.com/v2/cl21ya7e14cor01z40t7c2e91/master',
+    uri: process.env.GRAPHCMS_DB_URI,
     cache: new InMemoryCache(),
   });
-
   const data = await client.query({
     query: gql`
       query Projects {

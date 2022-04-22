@@ -106,8 +106,8 @@ export default function Container(props) {
         className="flex flex-col justify-center px-8 bg-slate-50 dark:bg-gray-900"
       >
         {children}
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
