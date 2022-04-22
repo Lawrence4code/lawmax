@@ -1,7 +1,10 @@
 import Image from 'next/image';
+
 import Tag from './Tag';
 
-const ProjectCard = ({ project }) => {
+import { ProjectCardProps } from 'interfaces';
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="border border-grey-200 dark:border-gray-800 rounded p-4 w-full bg-white dark:bg-gray-900">
       <Image
@@ -21,6 +24,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className="px-6 pt-4 pb-2">
         {project.tags.map((tag) => {
+          // @ts-ignore
           return <Tag key={tag.name} tag={tag} />;
         })}
       </div>

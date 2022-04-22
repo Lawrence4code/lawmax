@@ -4,11 +4,13 @@ import { useTheme } from 'next-themes';
 import NextLink from 'next/link';
 import cn from 'classnames';
 import Image from 'next/image';
-
-import Footer from './Footer';
 import Link from 'next/link';
 
-function NavItem({ href, text }) {
+import Footer from './Footer';
+
+import { ContainerProps, NavItemProps } from 'interfaces';
+
+function NavItem({ href, text }: NavItemProps) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -38,7 +40,7 @@ function NavItem({ href, text }) {
   );
 }
 
-export default function Container(props) {
+export default function Container(props: ContainerProps) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 

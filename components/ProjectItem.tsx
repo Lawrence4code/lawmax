@@ -3,17 +3,16 @@ import Tag from './Tag';
 
 import { githubIcon, linkIcon } from 'utils/svg';
 
+import { ProductCardProps } from 'interfaces';
+
 export default function ProductCard({
   title,
   description,
-  slug,
-  logo,
   tags,
   githubLink = '/',
   link = '/',
   isFeatured,
-  ...rest
-}) {
+}: ProductCardProps) {
   return (
     <Link href="/projects">
       <a className="border border-grey-200 dark:border-gray-800 rounded p-4 w-full bg-white dark:bg-gray-900">
@@ -34,6 +33,7 @@ export default function ProductCard({
         <p className="mt-1 text-gray-700 dark:text-gray-400">{description}</p>
         <div className="mt-4">
           {tags.map((tag) => {
+            // @ts-ignore
             return <Tag key={tag.name} tag={tag} />;
           })}
         </div>

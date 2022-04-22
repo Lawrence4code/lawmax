@@ -2,8 +2,6 @@ import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
 import ProductCard from 'components/ProjectCard';
 import ProjectItem from 'components/ProjectItem';
 
-import Link from 'next/link';
-
 const Project = ({ projects }) => {
   return (
     <>
@@ -31,11 +29,11 @@ const Project = ({ projects }) => {
               <ProjectItem
                 key={project.slug}
                 title={project.title}
-                slug={project.slug}
-                logo={project.logo}
                 description={project.description}
                 tags={project.tags}
                 isFeatured={project.isFeatured}
+                githubLink={project.githubLink}
+                link={project.link}
               />
             ))}
         </div>

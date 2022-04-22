@@ -1,13 +1,12 @@
-import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 
-import React from 'react';
+import { TagProps } from 'interfaces';
 
-const Tag = ({ tag }) => {
-  const { resolvedTheme } = useTheme();
+const Tag = ({ tag }: TagProps) => {
   const router = useRouter();
 
-  const tagClickHandler = (tagName) => {
+  // link/a cannot be used in link/a, using handling routing programmatically
+  const tagClickHandler = (tagName: String) => {
     router.push(`/resources/${tagName}`);
   };
 

@@ -1,12 +1,8 @@
 import Link from 'next/link';
 
-import type { Blog } from 'contentlayer/generated';
+import { BlogProps } from 'interfaces';
 
-export default function BlogPost({
-  title,
-  summary,
-  slug,
-}: Pick<Blog, 'title' | 'summary' | 'slug'>) {
+export default function BlogPost({ title, summary, slug }: BlogProps) {
   return (
     <Link href={`/blog/${slug}`}>
       <a className="w-full">
