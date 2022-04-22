@@ -24,7 +24,9 @@ export default function ProductCard({
             <div className="flex items-center cursor-pointer">
               <Link href={link}>{linkIcon('#3aafca', 13, 13)}</Link>
               <Link href={githubLink}>
-                <span className="pl-3">{githubIcon('#3aafca', 16, 16)}</span>
+                <span className="pl-3 cursor-pointer">
+                  {githubIcon('#3aafca', 16, 16)}
+                </span>
               </Link>
             </div>
           )}
