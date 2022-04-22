@@ -204,7 +204,7 @@
   resolved "https://registry.yarnpkg.com/@effect-ts/system/-/system-0.55.1.tgz#fe157e7639ff6b05a51b62379961662569da98fb"
   integrity sha512-OEnwd9JhrV2Q5S7cke/ZgR56Hn75DSr1aIkA0PBE1edoX6GKB6nOdu8u/vPhvqjxLHfMgN8o+EVaWUHPLIC1UQ==
 
-"@emotion/babel-plugin@^11.7.1":
+"@emotion/babel-plugin@^11.7.1", "@emotion/babel-plugin@^11.9.2":
   version "11.9.2"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.9.2.tgz#723b6d394c89fb2ef782229d92ba95a740576e95"
   integrity sha512-Pr/7HGH6H6yKgnVFNEj2MVlreu3ADqftqjqwUvDy/OJzKFgxKeTQ+eeUf20FOTuHVkDON2iNa25rAXVYtWJCjw==

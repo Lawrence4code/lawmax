@@ -13,7 +13,7 @@ export default function Home({ projects }) {
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 mb-4">
             Senior Associate - ReactJS at{' '}
-            <span className="font-semibold">Publicis Sapient </span>
+            <span className="font-semibold"> So and So </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-16">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -35,11 +35,11 @@ export default function Home({ projects }) {
               <ProjectItem
                 key={project.slug}
                 title={project.title}
-                slug={project.slug}
-                logo={project.logo}
                 description={project.description}
                 tags={project.tags}
                 isFeatured={project.isFeatured}
+                githubLink={project.githubLink}
+                link={project.link}
               />
             ))}
         </div>
