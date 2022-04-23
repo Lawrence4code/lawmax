@@ -16,24 +16,22 @@ const ResourceListing = ({ tags = [] }) => {
       {categories.map((categoryItem) => {
         return (
           <div key={categoryItem.title}>
-            <a className="w-full">
-              <div className="w-full mb-8">
-                <div className="flex flex-col justify-between md:flex-row">
-                  <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
-                    {categoryItem.title}
-                  </h4>
-                  <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0"></p>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {categoryItem.description}
-                </p>
-                <div className="sm:px-6 sm:pt-4 pb-2">
-                  {categoryItem?.tags?.map((tag) => {
-                    return <Tag key={tag.name} tag={tag} />;
-                  })}
-                </div>
+            <div className="w-full mb-8">
+              <div className="flex flex-col justify-between md:flex-row">
+                <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
+                  {categoryItem.title}
+                </h4>
+                <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0"></p>
               </div>
-            </a>
+              <p className="text-gray-600 dark:text-gray-400">
+                {categoryItem.description}
+              </p>
+              <div className="sm:px-6 sm:pt-4 pb-2">
+                {categoryItem?.tags?.map((tag) => {
+                  return <Tag key={tag.name} tag={tag} />;
+                })}
+              </div>
+            </div>
           </div>
         );
       })}

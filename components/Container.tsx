@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import NextLink from 'next/link';
+import Head from 'next/head';
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -48,8 +49,19 @@ export default function Container(props: ContainerProps) {
 
   const { children } = props;
 
+  const meta = {
+    title: 'Lawrence Dass – MERN Stack Developer',
+    description: `Front-end Developer, MERN Stack developer, and Mentor`,
+    type: 'website',
+  };
+
   return (
     <div className="bg-slate-50 dark:bg-gray-900 container-container">
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
+      </Head>
       <div className="flex flex-col justify-center px-8 py-4">
         <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-4 pb-4 sm:pb-16  text-gray-900 bg-slate-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <Link href="/">

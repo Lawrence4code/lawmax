@@ -19,20 +19,18 @@ const Resources = ({ categories }) => {
             {category.categoryItems.map((categoryItem) => {
               return (
                 <div key={categoryItem.title}>
-                  <a className="w-full">
-                    <div className="w-full">
-                      <div className="sm:flex flex-row justify-between md:flex-row items-center">
-                        <h4 className="w-fit mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
-                          {categoryItem.title}
-                        </h4>
-                        <div className="sm:px-2 sm:pt-4 sm:pb-2">
-                          {categoryItem.tags.map((tag) => {
-                            return <Tag key={tag.name} tag={tag} />;
-                          })}
-                        </div>
+                  <div className="w-full">
+                    <div className="sm:flex flex-row justify-between md:flex-row items-center">
+                      <h2 className="w-fit mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
+                        {categoryItem.title}
+                      </h2>
+                      <div className="sm:px-2 sm:pt-4 sm:pb-2">
+                        {categoryItem.tags.map((tag) => {
+                          return <Tag key={tag.name} tag={tag} />;
+                        })}
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
               );
             })}

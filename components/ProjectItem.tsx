@@ -15,7 +15,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Link href="/projects">
-      <a className="border border-grey-200 dark:border-gray-800 rounded p-4 w-full bg-white dark:bg-gray-900">
+      <span className="border border-grey-200 dark:border-gray-800 rounded p-4 w-full bg-white dark:bg-gray-900">
         <div className="flex justify-between items-center">
           <h3 className="text-lg font-bold text-left mt-2 text-gray-900 dark:text-gray-100">
             {title}
@@ -39,7 +39,7 @@ export default function ProductCard({
             return <Tag key={tag.name} tag={tag} />;
           })}
         </div>
-      </a>
+      </span>
     </Link>
   );
 }
