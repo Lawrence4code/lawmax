@@ -12,8 +12,7 @@ const Tag = ({ tag }: TagProps) => {
 
   return (
     <div
-      className="bg-inherit inline-block rounded-full text-white px-2 py-1 text-xs font-bold mr-3 mb-2 border border-grey-200 dark:border-gray-700 cursor-pointer"
-      style={{ color: `${tag.color}` }}
+      className="bg-inherit inline-block rounded-full text-sky-800 dark:text-sky-500 px-2 py-1 text-xs font-bold mr-3 mb-2 border border-grey-200 dark:border-gray-700 cursor-pointer"
       onClick={() => tagClickHandler(tag.name)}
     >
       #{`${tag.name}`}

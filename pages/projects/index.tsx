@@ -68,7 +68,6 @@ export async function getStaticProps() {
             id
             image
             name
-            color
           }
         }
       }

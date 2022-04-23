@@ -34,7 +34,6 @@ export type CloudinaryImageType = {
 
 export type Tag = {
   name: String;
-  color: String;
   image?: String;
   key?: String | any;
 };

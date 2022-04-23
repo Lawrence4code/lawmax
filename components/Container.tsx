@@ -57,8 +57,8 @@ export default function Container(props: ContainerProps) {
               <Image
                 className="cursor-pointer"
                 alt="LD logo"
-                height={76}
-                width={76}
+                height={80}
+                width={80}
                 src="/ld.png"
               />
             </div>

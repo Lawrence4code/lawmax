@@ -65,7 +65,6 @@ export async function getStaticProps(context) {
               link
               tags {
                 name
-                color
               }
             }
             ... on Resource {
@@ -73,7 +72,6 @@ export async function getStaticProps(context) {
               title
               tags {
                 name
-                color
               }
             }
           }
