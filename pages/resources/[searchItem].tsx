@@ -26,7 +26,7 @@ const ResourceListing = ({ tags = [] }) => {
               <p className="text-gray-600 dark:text-gray-400">
                 {categoryItem.description}
               </p>
-              <div className="sm:px-6 sm:pt-4 pb-2">
+              <div className="py-2 sm:px-6 sm:pt-4 pb-2">
                 {categoryItem?.tags?.map((tag) => {
                   return <Tag key={tag.name} tag={tag} />;
                 })}

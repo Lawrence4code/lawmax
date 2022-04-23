@@ -7,7 +7,7 @@ export default function Home({ projects }) {
   return (
     <div className="flex flex-col justify-center items-start max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
       <div className="flex flex-col-reverse sm:flex-row items-start">
-        <div className="flex flex-col pr-8">
+        <div className="flex flex-col">
           <h1 className="font-bold text-4xl sm:text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
             Lawrence Dass
           </h1>

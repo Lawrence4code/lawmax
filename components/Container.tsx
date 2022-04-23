@@ -10,6 +10,7 @@ import Link from 'next/link';
 import Footer from './Footer';
 
 import { ContainerProps, NavItemProps } from 'interfaces';
+import MobileMenu from './MobileMenu';
 
 function NavItem({ href, text }: NavItemProps) {
   const router = useRouter();
@@ -62,8 +63,9 @@ export default function Container(props: ContainerProps) {
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
       </Head>
-      <div className="flex flex-col justify-center px-8 py-4">
+      <div className="flex flex-col justify-center px-4 sm:px-8 py-4">
         <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-4 pb-4 sm:pb-16  text-gray-900 bg-slate-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+          <MobileMenu />
           <Link href="/">
             <div className="w-10 h-10">
               <Image
@@ -75,7 +77,7 @@ export default function Container(props: ContainerProps) {
               />
             </div>
           </Link>
-          <div className="ml-[-0.60rem]">
+          <div className="hidden sm:ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/blog" text="Blog" />
@@ -119,7 +121,7 @@ export default function Container(props: ContainerProps) {
       </div>
       <main
         id="skip"
-        className="flex flex-col justify-center px-8 bg-slate-50 dark:bg-gray-900"
+        className="flex flex-col justify-center  px-6 sm:px-8 bg-slate-50 dark:bg-gray-900"
       >
         {children}
       </main>

@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.description}
         </p>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="px-6 pt-4 py-2">
         {project.tags.map((tag) => {
           // @ts-ignore
           return <Tag key={tag.name} tag={tag} />;
