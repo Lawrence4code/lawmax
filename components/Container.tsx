@@ -53,13 +53,15 @@ export default function Container(props: ContainerProps) {
       <div className="flex flex-col justify-center px-8 py-4">
         <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-4 pb-4 sm:pb-16  text-gray-900 bg-slate-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <Link href="/">
-            <Image
-              className="cursor-pointer"
-              alt="LD logo"
-              height={38}
-              width={38}
-              src="/ld.png"
-            />
+            <div className="w-10 h-10">
+              <Image
+                className="cursor-pointer"
+                alt="LD logo"
+                height={76}
+                width={76}
+                src="/ld.png"
+              />
+            </div>
           </Link>
           <div className="ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
