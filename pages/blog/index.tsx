@@ -5,9 +5,7 @@ import { InferGetStaticPropsType } from 'next';
 
 import { allBlogs } from 'contentlayer/generated';
 
-export default function Blog({
-  posts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [searchValue, setSearchValue] = useState('');
   const filteredBlogPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -46,7 +44,7 @@ export default function Blog({
       ))}
     </div>
   );
-}
+};
 
 export function getStaticProps() {
   const posts = allBlogs.sort(
@@ -54,3 +52,5 @@ export function getStaticProps() {
   );
   return { props: { posts } };
 }
+
+export default Blog;

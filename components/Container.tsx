@@ -12,7 +12,7 @@ import Footer from './Footer';
 import { ContainerProps, NavItemProps } from 'interfaces';
 import MobileMenu from './MobileMenu';
 
-function NavItem({ href, text }: NavItemProps) {
+const NavItem = ({ href, text }: NavItemProps) => {
   const router = useRouter();
   const isActive = router.asPath === href;
 
@@ -40,9 +40,9 @@ function NavItem({ href, text }: NavItemProps) {
       </a>
     </NextLink>
   );
-}
+};
 
-export default function Container(props: ContainerProps) {
+const Container = (props: ContainerProps) => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
@@ -77,7 +77,7 @@ export default function Container(props: ContainerProps) {
               />
             </div>
           </Link>
-          <div className="hidden sm:ml-[-0.60rem]">
+          <div className="hidden sm:ml-[-0.60rem] sm:block">
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/blog" text="Blog" />
@@ -128,4 +128,6 @@ export default function Container(props: ContainerProps) {
       <Footer />
     </div>
   );
-}
+};
+
+export default Container;

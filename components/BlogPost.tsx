@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { BlogProps } from 'interfaces';
 
-export default function BlogPost({ title, summary, slug }: BlogProps) {
+const BlogPost = ({ title, summary, slug }: BlogProps) => {
   return (
     <Link href={`/blog/${slug}`}>
       <div className="w-full mb-8">
@@ -16,4 +16,6 @@ export default function BlogPost({ title, summary, slug }: BlogProps) {
       </div>
     </Link>
   );
-}
+};
+
+export default BlogPost;

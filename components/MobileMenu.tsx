@@ -7,7 +7,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import styles from 'styles/mobile-menu.module.css';
 import { useTheme } from 'next-themes';
 
-export default function MobileMenu() {
+const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const { resolvedTheme } = useTheme();
@@ -30,7 +30,7 @@ export default function MobileMenu() {
   };
 
   useEffect(() => {
-    return function cleanup() {
+    const cleanup = () => {
       document.body.style.overflow = '';
     };
   }, []);
@@ -152,4 +152,6 @@ export default function MobileMenu() {
       </OutsideClickHandler>
     </div>
   );
-}
+};
+
+export default MobileMenu;

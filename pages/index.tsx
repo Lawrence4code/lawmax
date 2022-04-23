@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 import ProjectItem from '../components/ProjectItem';
 
-export default function Home({ projects }) {
+const Home = ({ projects }) => {
   return (
     <div className="flex flex-col justify-center items-start max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
       <div className="flex flex-col-reverse sm:flex-row items-start">
@@ -68,7 +68,7 @@ export default function Home({ projects }) {
       </section>
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   const client = new ApolloClient({
@@ -100,3 +100,5 @@ export async function getStaticProps() {
     props: { projects },
   };
 }
+
+export default Home;

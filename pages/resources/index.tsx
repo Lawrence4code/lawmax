@@ -25,9 +25,9 @@ const Resources = ({ categories }) => {
                         {categoryItem.title}
                       </h2>
                       <div className="py-2 sm:px-2 sm:pt-4 sm:pb-2">
-                        {categoryItem.tags.map((tag) => {
-                          return <Tag key={tag.name} tag={tag} />;
-                        })}
+                        {categoryItem.tags.map((tag) => (
+                          <Tag key={tag.name} tag={tag} />
+                        ))}
                       </div>
                     </div>
                   </div>

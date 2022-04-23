@@ -13,9 +13,9 @@ const Project = ({ projects }) => {
       <div className="py-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 w-full max-w-7xl  mx-auto items-start ">
         {projects
           .filter((project) => project.isFeatured)
-          .map((project) => {
-            return <ProductCard key={project.title} project={project} />;
-          })}
+          .map((project) => (
+            <ProductCard key={project.title} project={project} />
+          ))}
       </div>
       <section className="w-full  max-w-6xl mx-auto">
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">

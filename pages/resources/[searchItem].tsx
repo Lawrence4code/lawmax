@@ -27,9 +27,9 @@ const ResourceListing = ({ tags = [] }) => {
                 {categoryItem.description}
               </p>
               <div className="py-2 sm:px-6 sm:pt-4 pb-2">
-                {categoryItem?.tags?.map((tag) => {
-                  return <Tag key={tag.name} tag={tag} />;
-                })}
+                {categoryItem?.tags?.map((tag) => (
+                  <Tag key={tag.name} tag={tag} />
+                ))}
               </div>
             </div>
           </div>

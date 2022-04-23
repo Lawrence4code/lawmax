@@ -6,7 +6,7 @@ import Container from 'components/Container';
 
 import './../styles/global.css';
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -20,6 +20,6 @@ function MyApp({ Component, pageProps }) {
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default MyApp;
