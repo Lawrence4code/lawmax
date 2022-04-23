@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <>
-      <div className="flex justify-center items-start max-w-7xl mx-auto w-full mb-8 gap-8">
+      <div className="flex justify-center items-start max-w-7xl mx-auto w-full gap-8">
         <a
           href="mailto:lawrence4code@gmail.com"
           target="_blank"
@@ -44,8 +44,10 @@ const Footer = () => {
           </span>
         </a>
       </div>
-      <div className="flex justify-center items-start max-w-7xl mx-auto w-full mb-8">
-        Copyright © {year} Lawrence. All rights reserved.
+      <div className="flex justify-center items-start max-w-7xl mx-auto w-full">
+        <p className="pt-4 pb-2">
+          Copyright © {year} Lawrence. All rights reserved.
+        </p>
       </div>
     </>
   );
