@@ -67,7 +67,7 @@ const Container = (props: ContainerProps) => {
         <nav className="flex items-center justify-between w-full relative max-w-7xl border-gray-200 dark:border-gray-700 mx-auto pt-4 pb-4 sm:pb-16  text-gray-900 bg-slate-50  dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <MobileMenu />
           <Link href="/">
-            <div className="w-10 h-10">
+            <div className="w-8 h-8 sm:w-10 sm:h-10">
               <Image
                 className="cursor-pointer"
                 alt="LD logo"

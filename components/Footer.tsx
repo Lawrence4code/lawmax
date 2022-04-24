@@ -10,7 +10,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <>
-      <div className="flex flex-col justify-center items-center max-w-7xl mx-auto">
+      <div className="flex flex-col justify-center items-center max-w-7xl sm:mx-auto px-4">
         <div className="w-32 sm:w-40 rounded-full mb-4">
           <Image
             alt="Lawrence Dass"
@@ -22,21 +22,24 @@ const Footer = () => {
         <p className="text-center">
           I am a Bangalore-based self-taught web developer, specializing in MERN
           stack (MongoDB- ExpressJS-React-NodeJS) with overall 3+ years of
-          experience in web development. <br /> I have worked with one of the
-          leading edTech FIITJEE (myPat) and Ecommerce company Codilar
-          technologies and other freelance projects. I love working with React
-          and Javascript. I like challenges and learning new technologies,
-          specifically related JavaScript ecosystem. My primary areas of
-          interest are performance optimization, scalability, and accessibility
-          of the web, and since I am obsessed with optimization, please click
-          {` `}
-          <span
-            onClick={() => setModalOn(true)}
-            className="text-blue-600 cursor-pointer"
-          >
-            here
-          </span>{' '}
-          to view the perf report of this site.
+          experience in web development. I have worked with one of the leading
+          edTech FIITJEE (myPat) and Ecommerce company Codilar technologies and
+          other freelance projects. I love working with React and Javascript. I
+          like challenges and learning new technologies, specifically related
+          JavaScript ecosystem. My primary areas of interest are performance
+          optimization, scalability, and accessibility of the web
+          <span className="hidden sm:inline-block">
+            , and since I am obsessed with optimization, please click
+            {` `}
+            <span
+              onClick={() => setModalOn(true)}
+              className="text-blue-600 cursor-pointer"
+            >
+              here
+            </span>{' '}
+            to view the perf report of this site
+          </span>
+          .
         </p>
       </div>
       <div className="flex justify-center items-start max-w-7xl mx-auto w-full gap-8">
