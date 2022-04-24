@@ -16,10 +16,12 @@ const Home = ({ projects }) => {
             <span className="font-semibold"> So and So </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            MERN stack developer, currently living in Bangalore, India. I am
+            passionate about web performance, accessibility and security. I
+            liked to work in detail and in specific parts of the web application
+            to enhance user experience. I am constantly learning and exploring
+            new technologies which solve real-life problems and believe in
+            taking that one extra step that makes our user’s life better.
           </p>
         </div>
       </div>

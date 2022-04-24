@@ -36,7 +36,7 @@ const Footer = () => {
           >
             here
           </span>{' '}
-          to check the perf report of this site.
+          to view the perf report of this site.
         </p>
       </div>
       <div className="flex justify-center items-start max-w-7xl mx-auto w-full gap-8">
