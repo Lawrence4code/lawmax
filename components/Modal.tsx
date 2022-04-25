@@ -9,7 +9,6 @@ const Modal = ({ setModalOn }) => {
       <div className="flex h-screen justify-center items-center ">
         <OutsideClickHandler
           onOutsideClick={() => {
-            console.log('onOutsideClick ttttt');
             setModalOn(false);
           }}
         >
