@@ -12,8 +12,8 @@ const Home = ({ projects }) => {
             Lawrence Dass
           </h1>
           <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-            Senior Associate - ReactJS at{' '}
-            <span className="font-semibold"> So and So </span>
+            MERN Stack Developer{' '}
+            <span className="font-semibold"> / Freelance </span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-16">
             MERN stack developer, currently living in Bangalore, India. I am
